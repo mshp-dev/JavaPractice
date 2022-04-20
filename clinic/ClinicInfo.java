@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.text.MessageFormat;
 import java.util.ArrayList;
@@ -312,7 +311,7 @@ class ClinicInfo {
             clinic.manager.name = null;
           }
           if (temp[1] != "") {
-            clinic.manager.salary = temp[1];
+            clinic.manager.salary = temp[1] + "$";
           } else {
             clinic.manager.salary = null;
           }
@@ -361,7 +360,7 @@ class ClinicInfo {
             recep.section = null;
           }
           if (temp[2] != "") {
-            recep.salary = temp[2];
+            recep.salary = temp[2] + "$";
           } else {
             recep.salary = null;
           }
@@ -396,12 +395,12 @@ class ClinicInfo {
             doctor.section = null;
           }
           if (temp[3] != "") {
-            doctor.salary = temp[3];
+            doctor.salary = temp[3] + "$";
           } else {
             doctor.salary = null;
           }
           if (temp[4] != "") {
-            doctor.visit = temp[4];
+            doctor.visit = temp[4] + "$";
           } else {
             doctor.visit = null;
           }
@@ -431,7 +430,7 @@ class ClinicInfo {
             patient.sicknessType = null;
           }
           if (temp[2] != "") {
-            patient.wallet = temp[2];
+            patient.wallet = temp[2] + "$";
           } else {
             patient.wallet = null;
           }
